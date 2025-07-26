@@ -33,8 +33,8 @@ col2.metric("Média de Peso (kg)", f"{df_filt['Weight'].mean():.1f}")
 col3.metric("Média de Altura (m)", f"{df_filt['Height'].mean():.2f}")
 
 # 4. Distribuição de níveis de obesidade
-st.subheader("Distribuição de Obesity_level")
-dist = df_filt["Obesity_level"].value_counts(normalize=True).mul(100)
+st.subheader("Distribuição de Obesity")
+dist = df_filt["Obesity"].value_counts(normalize=True).mul(100)
 st.bar_chart(dist)
 
 # 5. Correlação entre variáveis numéricas
